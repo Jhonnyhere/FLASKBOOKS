@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    
+    <body>
+<!---<div class="1">
+    <div class="1a">
+    <h1>Logo</h1>
+        <div class="1b">
+            <a href="#" >Home</a>
+            <a href="#" >Login</a>
+            <div class="1c">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>-->
+        <title>Generic Blog</title>
+    </head>
+    <body>
+    <h2 style="color:#093657">My Blog</h2>
+        <a href="/login">Login</a>
+        <hr>
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li> {{message}}</li>
+        {% endfor %}
+    </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %} {% endblock %}
+    </body>
+</html>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+    
+{% block title %} Show Camp Data {% endblock %}
+
+{% block content %}
+
+<div>
+
+    
+    <h1 class="center">These are some camps location</h1>
+
+
+        {% for campdata in product_det %}
+        <div class="main">
+        <div class="content">
+            <h2 class="center">{{campdata.location}}</h2>
+            <img src="{{campdata.image}}" alt = '{{campdata.filename}}'><br>
+            <h2 class="center">{{campdata.date}}</h2>  
+        </div>
+        </div>
+        {% endfor %} 
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Data list {% endblock%}
+{% block content %}
+
+{% if product_det|length<1 %}
+    <h2> Currently no data is added . First add some to see the list detail</h2>
+{% else %}
+<table>
+<tr>
+    <th>Sr. No.</th>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Action</th>
+</tr>{% set id=namespace(value=1) %}
+    
+{% for data in product_det %}
+
+    <tr>
+    <td> {{id.value}} </td>
+    {% set id.value = id.value + 1  %}
+    
+    <td> {{data.location}} </td>
+    <td>{{data.date}} </td>
+    <td> 
+        <a  href="/{{data.id}}/show_list"class="clasbtn btn-default btn-sm">
+        <span class="glyphicon glyphicon-eye-open"> </span> </a>| 
+
+        <a  href="{{ url_for('main.edit', id=data.id) }}" class="clasbtn btn-default btn-sm" >
+        <span class="glyphicon glyphicon-edit"> </span>  </a> |
+
+        <a  href="/{{data.id}}/delete"class="clasbtn btn-default btn-sm">
+        <span class="glyphicon glyphicon-trash"> </span> </a>
+        </td>
+</tr>     
+    
+{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% block content %}   
+
+    <h1 >Students details</h1>
+    {% if new_student|length<1 %}
+    <h2> There are no students added . First add some to see the data </h2>
+    {% else %}
+    <table>
+        <tr>
+            <th> Name </th>
+            <th> Father's Name </th>
+            <th> Email </th>
+            <th> Class </th>
+        </tr>
+    {% for data in new_student %}
+        <tr>
+        <td class="center">{{data.name}}</td>
+        <td class="center">{{data.father_name}}</td>
+        <td class="center">{{data.email}}</td>
+        <td class="center">{{data.standard}}</td> 
+        </tr>
+    {% endfor %} 
+    {% endif %}
+    </table>
+ 
+    
+{% endblock %}    

@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 106, 243);
+    color: bisque;
+}
+
+td,tr{
+    border:solid 1px black;
+    background: #ec8c4b;
+    text-align: center;}
+th{
+    text-align: center;
+    background: rgb(87, 243, 165);
+    border:solid 1px black;}
+
+table{width: 100%;
+      height: 80%;}
+
+input {
+    padding: 12px;
+    margin: 5px;
+    width:300px;
+    border-bottom-style: groove;
+    background-color: rgb(32, 106, 146);
+    align-items: center;
+      }
+      
+.no-outline:focus {
+    outline: none;
+      }
+
+
+form{
+    background-color: rgba(42, 218, 110, 0.726);
+    text-size-adjust: 20px;
+    border: none;
+    border-radius: 12px;
+    color: aquamarine;
+    text-align: center;
+}
+
+label {
+    font-family:sofia;
+    margin: auto;
+    padding: auto;  
+    font-size: 25px; 
+    background-color: rgb(182, 41, 41);
+    border-radius: 10px;}
+
+.main{
+    float:left;
+    width:265px;
+    height:300px;
+    border:2px ridge black;
+    background-color:aqua;
+    overflow:hidden;
+    border-radius:5px;}
+
+img{
+    width:265px;
+    height:150px;
+    border-radius: 15px;}
+
+.content{
+    width:265px;
+    height:300px;
+    align-items:center;}    
+
+.center{
+    text-align: center;
+    align-items: center;}  
+
+div.main{
+    display:flex;
+    margin: 10px;
+}    
+
+footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%; 
+    height: 40px;
+    background: rgb(8, 54, 82);
+}
+.container {
+    display:flex;
+    background-color: #ec853f;
+    border: 2px solid red;
+    border-radius:10px;
+    flex-direction: column;
+    width:680px;
+    padding:25px;
+    height: 520px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+     }
+.item{
+    border:1px solid red;
+    border-radius:12px;
+    height: 100%;
+    width:100%;
+    margin:auto;
+    text-align: center;
+    background-color: rgb(44, 165, 99);
+    font-size: xx-large;
+}
+
+#length{
+    width:350px;
+    height:280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }

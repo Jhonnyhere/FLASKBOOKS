@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<form  method="POST">
+
+    <label> Username :
+        <input type="text" name="aname" placeholder="Enter Username">
+    </label> <br>
+
+    <label> Password :
+        <input type="password" name="apaswd" placeholder="Enter Password">
+    </label> <br>
+
+    <input type="submit" value="login">   <br>
+
+    <h2><a href="{{ url_for("auth.adminsignup") }}"<span> If no account created SignUp first <span></h2>
+</form>
+
+{% endblock %}

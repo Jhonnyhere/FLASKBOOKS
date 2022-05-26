@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+    
+{% block title %} register {% endblock %}
+
+{% block content %}
+        <h1> Register Here </h1>
+
+        <form action="http://localhost:5000/register" method='POST'>
+            <label> Name : </label>
+            <input type="text" name="name" class="no-outline"> <br>
+            <label> Father's Name : </label>
+            <input type="text" name="father_name" class="no-outline"> <br>
+            <label> Email : </label>
+            <input type="email" name="email" class="no-outline"> <br>
+            <label> D.O.B : </label>
+            <input type="date" name="dob" class="no-outline"> <br>
+            <label> Class : </label>
+            <input type="text" name="standard" class="no-outline"><br>
+
+            <input type="submit" value="submit">
+        </form>
+
+{% endblock %}        
+        

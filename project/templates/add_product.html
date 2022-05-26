@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} addsomething {% endblock %}
+
+{% block content %}
+    
+  
+    <h1 class="center">Add Camp Details</h1>
+
+    <form method="POST" action="/add_any" enctype="multipart/form-data">
+        <label>Location  :</label> <br>   
+        <input type="text" name="location">
+        <br>
+        <label>Image  :</label><br>
+        <input type="file" name="pic" >
+        <br>
+        <label>date  :</label><br>
+        <input type="date" name="date" >
+        <br>
+        <br>
+        <input type="submit" value="Add" style="color:red; font-weight:bold;">
+    </form>
+    
+{% endblock %}
